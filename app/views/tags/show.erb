@@ -1,0 +1,5 @@
+<h1><%= @tag.name.titleize %></h1>
+
+<% @pictures.each do |picture| %>
+<img src="<%= picture.image_link %>">
+<% end %>
