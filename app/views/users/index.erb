@@ -1,0 +1,13 @@
+<h1>Users:</h1>
+
+  <table>
+    <% @users.each do |user| %>
+      <tr>
+        <td><a href="/users/<%= user.id %>"><img src="<%= user.profile_image %>"></a></td>
+      </tr>
+      <tr>
+        <td><a href="/users/<%= user.id %>"><%= "#{user.username}" %></a></td>
+      </tr>
+
+    <% end %>
+  </table>

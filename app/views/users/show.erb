@@ -1,0 +1,14 @@
+<h1><%= "#{@user.first_name} #{@user.last_name}" %></h1>
+<img src="<%= @user.profile_image %>">
+<p><small>Username: <%= "#{@user.username}" %></small></p>
+
+
+
+<h3>My Photos:</h3>
+
+<% @pictures.each do |picture| %>
+  <img src="<%= picture.image_link %>"> <br>
+  <% picture.tags.each do |tag| %>
+      <small><a href="/tags/<%= tag.id %>"> <%= tag.name %> </a></small><br>
+     <% end %>
+<% end %>
