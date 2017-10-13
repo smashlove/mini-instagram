@@ -3,7 +3,7 @@ module PixabayImages
 class Adapter
 
   def fetch_images
-    images = JSON.parse(RestClient.get("https://pixabay.com/api/?key=#{ENV['PIXABAY_API_KEY']}&image_type=photo&category=people&safesearch=true&per_page=50&pretty=true"))
+    images = JSON.parse(RestClient.get("https://pixabay.com/api/?key=#{ENV['PIXABAY_API_KEY']}&image_type=photo&category=people&safesearch=true&per_page=100&pretty=true"))
 
     images["hits"].each do |image_hash|
       # binding.pry
