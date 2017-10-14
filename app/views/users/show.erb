@@ -6,6 +6,8 @@
 
 <h3>My Photos:</h3>
 
+<p><a href="/users/<%= @user.id %>/new-photo">Add Photo</a></p>
+
 <% @pictures.each do |picture| %>
   <img src="<%= picture.image_link %>"> <br>
   <% picture.tags.each do |tag| %>

@@ -20,9 +20,26 @@
 
 </form>
 
-<br>
-<br>
 <form action="/users/<%= @user.id %>/delete"< method="post">
   <input id="hidden" type="hidden" name="_method" value="delete">
   <input style="color: red" id="delete" type="submit" value="Delete Profile">
 </form>
+
+<br>
+<br>
+<h3>Edit Photos:</h3>
+<% @pictures.each do |picture| %>
+<form action="/users/<%= @user.id %>/<%= picture.id %>/delete"< method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <figure>
+    <img src="<%= picture.image_link %>">
+    <figcaption><input type="submit" name="image_link" value="Delete Photo"></figcaption>
+
+    <figcaption>
+      <% picture.tags.each do |tag| %>
+        <small><a href="/tags/<%= tag.id %>"> <%= tag.name %> </a></small><br>
+      <% end %>
+    </figcaption>
+  </figure>
+  </form>
+<% end %>
