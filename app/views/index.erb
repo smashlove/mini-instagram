@@ -1,0 +1,18 @@
+<h1>Welcome to MiniGram</h1>
+
+<h3>Trending Users:</h3>
+<% @users.each do |user| %>
+  <figure>
+    <a href="/users/<%= user.id %>"><img src="<%= user.profile_image %>"> </a>
+    <figcaption><a href="/users/<%= user.id %>"><%= user.username %></a></figcaption>
+  </figure>
+<% end %>
+
+
+<h3>Search by Tag:</h3>
+
+<ul>
+  <% @tags.each do |tag| %>
+    <li><a href="/tags/<%= tag.id %>"><%= tag.name %></a></li>
+  <% end %>
+</ul>
