@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20171013170012) do
     t.string "first_name"
     t.string "last_name"
     t.string "profile_image"
+    t.string "city"
+    t.string "state"
   end
 
 end
