@@ -1,0 +1,18 @@
+<h1>Create New User Profile</h1>
+
+<form action="/users" method="post">
+  <h3>Name</h3>
+  <p>First Name: <input type="text" name="user[first_name]"></p>
+  <p>Last Name: <input type="text" name="user[last_name]"></p>
+
+  <h3>Location</h3>
+  <p>City: <input type="text" name="user[city]"></p>
+  <p>State: <input type="text" name="user[state]"></p>
+
+  <br>
+  <p>Choose a username: <input type="text" name="user[username]" required></p>
+
+  <p>Link to profile image: <input type="text" name="user[profile_image]"></p>
+
+  <input type="submit" value="Create Profile">
+</form>
